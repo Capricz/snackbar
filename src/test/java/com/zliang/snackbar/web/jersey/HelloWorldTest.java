@@ -39,15 +39,18 @@
  */
 package com.zliang.snackbar.web.jersey;
 
+import static org.junit.Assert.assertEquals;
+
 import java.net.URI;
+
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.UriBuilder;
 
 import org.glassfish.jersey.test.JerseyTest;
-
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import com.zliang.snackbar.web.rest.App;
+import com.zliang.snackbar.web.rest.MyApplication;
 
 /**
  * Simple test to check "Hello World!" is being returned from the helloworld resource.

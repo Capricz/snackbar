@@ -53,7 +53,8 @@ public class MyApplication extends Application {
     public Set<Class<?>> getClasses() {
         final Set<Class<?>> classes = new HashSet<Class<?>>();
         // register root resource
-        classes.add(HelloWorldResource.class);
+//        classes.add(HelloWorldResource.class);
+        classes.add(PersonResource.class);
         return classes;
     }
 }
