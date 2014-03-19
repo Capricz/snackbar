@@ -10,8 +10,8 @@ import javax.ws.rs.core.UriBuilder;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;
 
+import com.zliang.snackbar.config.MyApplication;
 import com.zliang.snackbar.web.rest.App;
-import com.zliang.snackbar.web.rest.MyApplication;
 
 public class PersonServiceTest extends JerseyTest {
 

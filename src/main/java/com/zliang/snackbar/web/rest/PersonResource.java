@@ -1,14 +1,16 @@
 package com.zliang.snackbar.web.rest;
 
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.zliang.snackbar.service.IPersonService;
 
-@Path("helloperson")
+@Path("/person")
 public class PersonResource {
 	
 	@Autowired
@@ -16,7 +18,8 @@ public class PersonResource {
 	
 	
 	@GET
-	@Produces("text/plain")
+	@Produces(MediaType.TEXT_PLAIN)
+	@Path("/hello")
 	public String getHello(){
 		return personService.sayHello("Adermon"); 
 	}

@@ -37,24 +37,33 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-package com.zliang.snackbar.web.rest;
+package com.zliang.snackbar.config;
 
 import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
-import java.util.HashSet;
-import java.util.Set;
+
+import org.glassfish.jersey.server.ResourceConfig;
+
+import com.zliang.snackbar.web.rest.HelloWorldResource;
+import com.zliang.snackbar.web.rest.PersonResource;
 
 /**
  * @author Pavel Bucek (pavel.bucek at oracle.com)
  */
-@ApplicationPath("/")
-public class MyApplication extends Application {
-    @Override
+@ApplicationPath("jaxrs")
+public class MyApplication extends ResourceConfig {
+	
+	public MyApplication(){
+		packages("com.zliang.snackbar.web.rest");
+		register(PersonResource.class);
+		register(HelloWorldResource.class);
+		
+	}
+   /* @Override
     public Set<Class<?>> getClasses() {
         final Set<Class<?>> classes = new HashSet<Class<?>>();
         // register root resource
 //        classes.add(HelloWorldResource.class);
         classes.add(PersonResource.class);
         return classes;
-    }
+    }*/
 }
