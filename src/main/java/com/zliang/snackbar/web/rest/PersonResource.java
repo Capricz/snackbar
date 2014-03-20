@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.zliang.snackbar.service.IPersonService;
 
-@Path("/person")
+@Path("person")
 public class PersonResource {
 	
 	@Autowired
@@ -19,7 +19,6 @@ public class PersonResource {
 	
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	@Path("/hello")
 	public String getHello(){
 		return personService.sayHello("Adermon"); 
 	}

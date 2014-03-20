@@ -10,6 +10,7 @@
 <center>
 	<h2>Welcom to Snackbar</h2>
 </center>
-click<a href="helloServlet">here</a>
+click<a href="helloServlet">here</a><br>
+click <a href="jaxrs/helloworld">jersey</a>
 </body>
 </html>

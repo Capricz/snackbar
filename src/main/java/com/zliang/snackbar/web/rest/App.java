@@ -46,8 +46,8 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.glassfish.jersey.server.ServerProperties;
-import org.glassfish.jersey.servlet.ServletContainer;
+//import org.glassfish.jersey.server.ServerProperties;
+//import org.glassfish.jersey.servlet.ServletContainer;
 
 
 /**

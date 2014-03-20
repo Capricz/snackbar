@@ -46,6 +46,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 import com.zliang.snackbar.web.rest.HelloWorldResource;
 import com.zliang.snackbar.web.rest.PersonResource;
 
+
 /**
  * @author Pavel Bucek (pavel.bucek at oracle.com)
  */
@@ -58,12 +59,12 @@ public class MyApplication extends ResourceConfig {
 		register(HelloWorldResource.class);
 		
 	}
-   /* @Override
-    public Set<Class<?>> getClasses() {
-        final Set<Class<?>> classes = new HashSet<Class<?>>();
-        // register root resource
-//        classes.add(HelloWorldResource.class);
-        classes.add(PersonResource.class);
-        return classes;
-    }*/
+//    @Override
+//    public Set<Class<?>> getClasses() {
+//        final Set<Class<?>> classes = new HashSet<Class<?>>();
+//        // register root resource
+////        classes.add(HelloWorldResource.class);
+//        classes.add(PersonResource.class);
+//        return classes;
+//    }
 }
