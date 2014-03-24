@@ -5,7 +5,7 @@
 	<groupId>com.zliang</groupId>
 	<artifactId>snackbar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>snackbar</name>
 	<url>http://maven.apache.org</url>
@@ -18,6 +18,29 @@
 	<!-- 
 	mvn archetype:generate -DarchetypeArtifactId=jersey-quickstart-webapp -DarchetypeGroupId=org.glassfish.jersey.archetypes -DinteractiveMode=false -DgroupId=com.example -DartifactId=simple-service -Dpackage=com.example -DarchetypeVersion=2.0-m11
 	 -->
+	 
+	 <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+                <inherited>true</inherited>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<!-- <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-war-plugin</artifactId>
+		        <version>2.3</version>
+		        <configuration>
+		            <failOnMissingWebXml>false</failOnMissingWebXml>
+		        </configuration>
+		    </plugin> -->
+		</plugins>
+	</build>
 	 
 	 <dependencyManagement>
         <dependencies>
@@ -72,11 +95,23 @@
 			<artifactId>spring-test</artifactId>
 			<version>3.2.5.RELEASE</version>
 		</dependency>
+		<dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-jdbc</artifactId>
+        	<version>3.2.5.RELEASE</version>
+        </dependency>
 		
 		<!-- Jersey -->
-		<dependency>
+        <!-- uncomment this to get JSON support
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-moxy</artifactId>
+        </dependency>
+        -->
+        <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-servlet-core</artifactId>
+<!--             <artifactId>jersey-container-servlet-core</artifactId> -->
+			<artifactId>jersey-container-servlet</artifactId>
             <!-- use the following artifactId if you don't need servlet 2.x compatibility -->
             <!-- artifactId>jersey-container-servlet</artifactId -->
         </dependency>
@@ -86,6 +121,28 @@
             <artifactId>jersey-media-moxy</artifactId>
         </dependency>
         -->
+        <!-- <dependency>
+        	<groupId>org.glassfish.jersey.containers</groupId>
+        	<artifactId>jersey-container-servlet-core</artifactId>
+        	<version>2.7</version>
+        </dependency> -->
+        <!-- <dependency>
+		    <groupId>org.glassfish.jersey.core</groupId>
+		    <artifactId>jersey-client</artifactId>
+		    <version>2.7</version>
+		</dependency> -->
+        <!-- <dependency>
+        	<groupId>org.glassfish.jersey.ext</groupId>
+        	<artifactId>jersey-spring3</artifactId>
+        </dependency> -->
+        <!-- <dependency>
+        	<groupId>org.glassfish.jersey.test-framework</groupId>
+        	<artifactId>jersey-test-framework-core</artifactId>
+        </dependency> -->
+        <dependency>
+        	<groupId>org.glassfish.jersey.ext</groupId>
+        	<artifactId>jersey-spring3</artifactId>
+        </dependency>
 	</dependencies>
 	
 	
@@ -97,16 +154,4 @@
 		    <layout>default</layout>
 		</repository>
 	</repositories>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 </project>

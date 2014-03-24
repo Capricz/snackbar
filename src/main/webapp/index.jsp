@@ -11,6 +11,8 @@
 	<h2>Welcom to Snackbar</h2>
 </center>
 click<a href="helloServlet">here</a><br>
-click <a href="jaxrs/helloworld">jersey</a>
+click <a href="jaxrs/helloworld">jersey</a><br>
+click <a href="jaxrs/person/sayHello">person</a><br>
+<p><a href="webapi/myresource">Jersey resource</a>
 </body>
 </html>

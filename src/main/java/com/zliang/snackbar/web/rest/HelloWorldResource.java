@@ -52,7 +52,7 @@ public class HelloWorldResource {
     @GET
     @Produces("text/plain")
     public String getHello() {
-        return "Hello World!";
+        return "Hello World! 5";
     }
 
 }

@@ -47,14 +47,11 @@ import com.zliang.snackbar.web.rest.HelloWorldResource;
 import com.zliang.snackbar.web.rest.PersonResource;
 
 
-/**
- * @author Pavel Bucek (pavel.bucek at oracle.com)
- */
 @ApplicationPath("jaxrs")
 public class MyApplication extends ResourceConfig {
 	
 	public MyApplication(){
-		packages("com.zliang.snackbar.web.rest");
+//		packages("com.zliang.snackbar.web.rest");
 		register(PersonResource.class);
 		register(HelloWorldResource.class);
 		

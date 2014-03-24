@@ -14,9 +14,9 @@ import com.zliang.snackbar.service.IPersonService;
 public class PersonResource {
 	
 	@Autowired
-	private IPersonService personService;
+	public IPersonService personService;
 	
-	
+	@Path("sayHello")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getHello(){
