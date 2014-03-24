@@ -9,7 +9,7 @@ import com.zliang.snackbar.service.PersonService;
 
 @Configuration
 @ComponentScan("com.zliang.snackbar")
-public class AppConfig {
+public class AppConfig { 
 
 	@Bean
 	public IPersonService personService(){
