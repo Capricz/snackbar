@@ -1,4 +1,4 @@
-package com.zliang.snackbar.core.thread;
+package com.zliang.snackbar.core.mythread;
 
 import java.util.Random;
 
