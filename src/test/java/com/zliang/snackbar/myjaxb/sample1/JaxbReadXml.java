@@ -1,4 +1,4 @@
-package com.zliang.snackbar.myjaxb;
+package com.zliang.snackbar.myjaxb.sample1;
 
 import java.io.File;
 import java.io.FileInputStream;
